@@ -1,0 +1,9 @@
+{
+	"servers": {
+		"my-mcp-server-29fb0666": {
+			"url": "http://localhost:3000/mcp",
+			"type": "http"
+		}
+	},
+	"inputs": []
+}
