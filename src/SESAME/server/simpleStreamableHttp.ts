@@ -958,7 +958,9 @@ if (useOAuth && authMiddleware) {
 } else {
     app.get('/mcp', mcpGetHandler);
 }
-
+app.get("/", (_req, res) => {
+    res.send("MCP Streamable HTTP Server is running");
+});
 // Handle DELETE requests for session termination (according to MCP spec)
 const mcpDeleteHandler = async (req: Request, res: Response) => {
     const sessionId = req.headers['mcp-session-id'] as string | undefined;
