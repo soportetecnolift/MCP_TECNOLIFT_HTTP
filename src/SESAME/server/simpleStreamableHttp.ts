@@ -767,7 +767,9 @@ const getServer = () => {
 const MCP_PORT = process.env.MCP_PORT ? parseInt(process.env.MCP_PORT, 10) : 3000;
 const AUTH_PORT = process.env.MCP_AUTH_PORT ? parseInt(process.env.MCP_AUTH_PORT, 10) : 3001;
 
-const app = createMcpExpressApp();
+const app = createMcpExpressApp({
+    host: '0.0.0.0'
+});
 
 // Set up OAuth if enabled
 let authMiddleware = null;
